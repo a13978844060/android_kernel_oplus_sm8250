@@ -48,9 +48,8 @@ extern void show_regs(struct pt_regs *);
 #endif /* CONFIG_OPLUS_FEATURE_INPUT_BOOST_V4 */
 
 sed -i '/struct task_struct {/a \
-    unsigned int self_task_state;    /* SuSFS 任务状态标志 */' include/linux/sched.h
-        
-        # 添加 SuSFS 相关的函数声明
+    unsigned int self_task_state
+#include</linux/sched.h>
         sed -i '1500a \
 #ifdef CONFIG_KSU_SUSFS\
 extern void susfs_task_init(struct task_struct *tsk);\
