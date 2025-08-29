@@ -2,7 +2,7 @@
 VERSION = 4
 PATCHLEVEL = 19
 SUBLEVEL = 157
-EXTRAVERSION = love jing
+EXTRAVERSION = -love jing
 NAME = "People's Front"
 
 # *DOCUMENTATION*
