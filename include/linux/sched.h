@@ -47,15 +47,6 @@ extern void show_regs(struct pt_regs *);
 #include <linux/tuning/frame_boost_group.h>
 #endif /* CONFIG_OPLUS_FEATURE_INPUT_BOOST_V4 */
 
-sed -i '/struct task_struct {/a \
-    unsigned int self_task_state
-#include</linux/sched.h>
-        sed -i '1500a \
-#ifdef CONFIG_KSU_SUSFS\
-extern void susfs_task_init(struct task_struct *tsk);\
-extern int susfs_check_permission(struct task_struct *tsk);\
-#endif' include/linux/sched.h
-	
 /* task_struct member predeclarations (sorted alphabetically): */
 struct audit_context;
 struct backing_dev_info;
